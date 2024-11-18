@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentUrl = window.location.href;
     const urlPath = window.location.pathname;
 
-    if (currentUrl.includes('weshack.me') && urlPath.endsWith('.html')) {
+    if (currentUrl.includes('weshack.space') && urlPath.endsWith('.html')) {
         if (urlPath.endsWith('index.html')) {
             window.location.href = currentUrl.replace('/index.html', '');
         } else {
