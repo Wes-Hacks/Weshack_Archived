@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unoptimized Website</title>
+    <style>
+        body {
+            background-color: white;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .box {
+            width: 400px;
+            height: 300px;
+            margin: 50px;
+            background-color: grey;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 100px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Welcome to the Unoptimized Website!</h1>
+    </header>
+    <div class="content">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <footer>
+        <p>Footer content here</p>
+    </footer>
+</div>
+<script>
+    document.querySelectorAll('.box').forEach(box => {
+        box.addEventListener('mouseover', () => {
+            box.style.backgroundColor = 'red';
+            box.style.transition = '0.5s';
+        });
+        box.addEventListener('mouseleave', () => {
+            box.style.backgroundColor = 'grey';
+        });
+    });
+
+    for (let i = 0; i < 100000; i++) {
+        console.log("Log", i);
+    }
+</script>
+</body>
+</html>
